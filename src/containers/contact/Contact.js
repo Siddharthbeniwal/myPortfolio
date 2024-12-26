@@ -42,9 +42,7 @@ export default function Contact() {
                 </>
               )}
               <div
-                className={`${
-                  isDark ? "dark-mode" : ""
-                } contact-detail-email`}
+                className={`${isDark ? "dark-mode" : ""} contact-detail-email`}
 
                 // className="contact-detail-email"
                 // href={"mailto:" + contactInfo.email_address}

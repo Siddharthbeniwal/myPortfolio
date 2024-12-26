@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef} from "react";
 import "./Progress.scss";
-import { illustration, techStack } from "../../portfolio";
-import { Fade } from "react-reveal";
+import {illustration, techStack} from "../../portfolio";
+import {Fade} from "react-reveal";
 import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 
@@ -22,7 +22,7 @@ export default function StackProgress() {
       },
       {
         root: null, // Default is the viewport
-        threshold: 0.4, // Trigger when 40% of the component is in view
+        threshold: 0.4 // Trigger when 40% of the component is in view
       }
     );
 
@@ -41,7 +41,7 @@ export default function StackProgress() {
     if (isVisible) {
       // Animate the progress bars once the component is visible
       setProgressValues(
-        techStack.experience.map((exp) => parseInt(exp.progressPercentage, 10))
+        techStack.experience.map(exp => parseInt(exp.progressPercentage, 10))
       );
     }
   }, [isVisible]);

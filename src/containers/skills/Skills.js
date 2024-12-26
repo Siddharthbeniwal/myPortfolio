@@ -43,7 +43,7 @@ export default function Skills() {
             >
               {skillsSection.subTitle}
             </p>
-            <SoftwareSkill isDark={isDark}/>
+            <SoftwareSkill isDark={isDark} />
             <div>
               {skillsSection.skills.map((skills, i) => {
                 return (

@@ -126,7 +126,7 @@ export default function MyProjects() {
 
             {isVideoLoading && (
               <div className="loading-spinner">
-                <DisplayLottie animationData={loadingSpinner} /> 
+                <DisplayLottie animationData={loadingSpinner} />
                 Loading video
               </div>
             )}
