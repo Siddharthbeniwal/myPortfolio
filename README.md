@@ -9,4 +9,4 @@ Resume
 Contact Info- e-mail  
 Networks- GitHub, LinkedIn  
   
-The Theme is by developerFolio Team- https://github.com/saadpasta/developerFolio  
+The Theme is by developerFolio Team.
