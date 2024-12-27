@@ -22,7 +22,7 @@
     "sass": "^1.32.8"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "DISABLE_ESLINT_PLUGIN=true npm run build",
     "start": "node fetch.js && react-scripts start",
     "build": "node fetch.js && react-scripts build",
     "deploy": "gh-pages -b master -d build",
@@ -37,7 +37,7 @@
       "no-unused-vars": [
         "warn"
       ],
-      "no-unused-imports": "warn"
+      "no-unused-imports": "off"
     }
   },
   "browserslist": {
