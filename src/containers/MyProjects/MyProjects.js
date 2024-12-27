@@ -7,6 +7,17 @@ import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import loadingSpinner from "../../assets/lottie/loadingSpinner.json";
 import "./MyProjects.scss";
 
+const trackButtonClick = (eventName, eventLabel) => {
+  if (typeof gtag === "function") {
+    gtag("event", eventName, {
+      event_category: "Projects",
+      event_label: eventLabel,
+    });
+  } else {
+    console.warn("Google Analytics is not initialized.");
+  }
+};
+
 export default function MyProjects() {
   const {isDark} = useContext(StyleContext);
 
@@ -94,11 +105,14 @@ export default function MyProjects() {
                             className={
                               isDark ? "dark-mode project-tag" : "project-tag"
                             }
-                            onClick={() =>
-                              link.name === "Watch Demo Video"
-                                ? openModal(link.url)
-                                : window.open(link.url, "_blank").focus()
-                            }
+                            onClick={() => {
+                              trackButtonClick(link.name, link.url);
+                              if (link.name === "Watch Demo Video") {
+                                openModal(link.url);
+                              } else {
+                                window.open(link.url, "_blank").focus();
+                              }
+                            }}
                           >
                             {link.name}
                           </span>

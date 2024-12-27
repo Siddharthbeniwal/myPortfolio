@@ -1,8 +1,20 @@
 import React from "react";
 import "./SocialMedia.scss";
-import {socialMediaLinks} from "../../portfolio";
+import { socialMediaLinks } from "../../portfolio";
 
-export default function socialMedia() {
+// Function to track user clicks
+const trackSocialMediaClick = (platform) => {
+  if (typeof gtag === "function") {
+    gtag("event", "Social Media Click", {
+      event_category: "Social Media",
+      event_label: platform,
+    });
+  } else {
+    console.warn("Google Analytics is not initialized.");
+  }
+};
+
+export default function SocialMedia() {
   if (!socialMediaLinks.display) {
     return null;
   }
@@ -14,6 +26,7 @@ export default function socialMedia() {
           className="icon-button github"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackSocialMediaClick("GitHub")}
         >
           <i className="fab fa-github"></i>
           <span></span>
@@ -26,6 +39,7 @@ export default function socialMedia() {
           className="icon-button linkedin"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackSocialMediaClick("LinkedIn")}
         >
           <i className="fab fa-linkedin-in"></i>
           <span></span>
@@ -38,6 +52,7 @@ export default function socialMedia() {
           className="icon-button google"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackSocialMediaClick("Email")}
         >
           <i className="fas fa-envelope"></i>
           <span></span>
