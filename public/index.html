@@ -26,7 +26,8 @@
     <!-- Link to a hosted image -->
     <meta
       property="og:image"
-      content="https://siddharthbeniwal.netlify.app/og-siddharth-beniwal.jpg"    />
+      content="https://siddharthbeniwal.netlify.app/og-siddharth-beniwal.jpg"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,13 +36,16 @@
       name="twitter:description"
       content="A portfolio of Siddharth Beniwal, showcasing expertise in frontend development with ReactJS."
     />
-    <meta name="twitter:image" content="https://siddharthbeniwal.netlify.app/og-siddharth-beniwal.jpg">
+    <meta
+      name="twitter:image"
+      content="https://siddharthbeniwal.netlify.app/og-siddharth-beniwal.jpg"
+    />
 
     <meta name="msapplication-TileColor" content="#603cba" />
     <meta name="theme-color" content="#6c63ff" />
 
     <!-- Canonical Link -->
-    <link rel="canonical" href="https://siddharthbeniwal.netlify.app">
+    <link rel="canonical" href="https://siddharthbeniwal.netlify.app" />
 
     <!-- Favicon and Icons -->
     <link
@@ -124,9 +128,6 @@
       }
     </script>
 
-
-    <!-- Global site tag (gtag.js) - Google Analytics - to be added -->
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css"
@@ -141,6 +142,21 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VT5PZCZZXB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-VT5PZCZZXB");
+    </script>
   </head>
 
   <body>
