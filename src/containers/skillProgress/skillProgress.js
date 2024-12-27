@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Progress.scss";
-import {illustration, techStack} from "../../portfolio";
-import {Fade} from "react-reveal";
+import { illustration, techStack } from "../../portfolio";
+import { Fade } from "react-reveal";
 import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 
@@ -26,16 +26,19 @@ export default function StackProgress() {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current); // Start observing the container
+    // Store the current sectionRef value in a variable
+    const currentSectionRef = sectionRef.current;
+
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef); // Start observing the container
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current); // Cleanup observer on unmount
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef); // Cleanup observer on unmount
       }
     };
-  }, []);
+  }, []); // Empty dependency array to run only once on mount
 
   useEffect(() => {
     if (isVisible) {
