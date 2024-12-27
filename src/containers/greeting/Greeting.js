@@ -14,6 +14,31 @@ export default function Greeting() {
   if (!greeting.displayGreeting) {
     return null;
   }
+
+  function trackResumeDownload() {
+    if (typeof gtag === "function") {
+      gtag("event", "resume_download", {
+        event_category: "Downloads",
+        event_label: "SiddharthBeniwal_Resume.pdf",
+        value: 1
+      });
+    } else {
+      console.warn("Google Analytics is not initialized.");
+    }
+  }
+
+  function trackContactButtonClick() {
+    if (typeof gtag === "function") {
+      gtag("event", "contact_click", {
+        event_category: "Button Clicks",
+        event_label: "Contact Me Button",
+        value: 1
+      });
+    } else {
+      console.warn("Google Analytics is not initialized.");
+    }
+  }
+
   return (
     <Fade bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
@@ -41,14 +66,19 @@ export default function Greeting() {
                 <strong>ReactJS</strong> and <strong>Redux</strong>.
               </p>
               <div id="resume" className="empty-div"></div>
-              <SocialMedia />
+              {/* <SocialMedia /> */}
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
+                <Button
+                  text="Contact me"
+                  href="#contact"
+                  onClick={() => trackContactButtonClick()}
+                />
                 {greeting.resumeLink && (
                   <a
                     href={require("./SiddharthBeniwal_Resume.pdf")}
                     download="SiddharthBeniwal_Resume.pdf"
                     className="download-link-button"
+                    onClick={() => trackResumeDownload()}
                   >
                     <Button text="Download my resume" />
                   </a>
