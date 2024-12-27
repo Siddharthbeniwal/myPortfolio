@@ -32,7 +32,13 @@
     "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "no-unused-vars": [
+        "warn"
+      ],
+      "no-unused-imports": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -54,6 +60,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "dotenv": "^8.2.0",
+    "eslint": "^8.57.1",
     "prettier": "^2.3.1"
   }
 }
