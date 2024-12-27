@@ -31,15 +31,6 @@
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
     "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
   },
-  "eslintConfig": {
-    "extends": "react-app",
-    "rules": {
-      "no-unused-vars": [
-        "warn"
-      ],
-      "no-unused-imports": "off"
-    }
-  },
   "browserslist": {
     "production": [
       ">0.3%",
@@ -59,8 +50,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "dotenv": "^8.2.0",
-    "eslint": "^8.57.1",
-    "prettier": "^2.3.1"
+    "dotenv": "^8.2.0"
   }
 }
