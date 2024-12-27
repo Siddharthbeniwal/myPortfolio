@@ -136,6 +136,8 @@ export default function MyProjects() {
               src={videoSrc}
               title="Video Demo"
               allow="autoplay; encrypted-media"
+              preload="none"
+              as="video"
               allowFullScreen
               onLoad={() => setVideoLoading(false)}
             ></iframe>
