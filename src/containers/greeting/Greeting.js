@@ -74,14 +74,8 @@ export default function Greeting() {
                   onClick={() => trackContactButtonClick()}
                 />
                 {greeting.resumeLink && (
-                  // <a
-                  //   href={require("./SiddharthBeniwal_Resume.pdf")}
-                  //   download="SiddharthBeniwal_Resume.pdf"
-                  //   className="download-link-button"
-                  //   onClick={() => trackResumeDownload()}
-                  // >
                   <a
-                    href="/SiddharthBeniwal_Resume.pdf" 
+                    href={require("./SiddharthBeniwal_Resume.pdf")}
                     download="SiddharthBeniwal_Resume.pdf"
                     className="download-link-button"
                     onClick={() => trackResumeDownload()}
