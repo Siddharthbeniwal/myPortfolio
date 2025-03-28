@@ -19,8 +19,8 @@ export default function Greeting() {
     if (typeof gtag === "function") {
       gtag("event", "resume_download", {
         event_category: "Downloads",
-        event_label: "SiddharthBeniwal_Resume.docx", 
-        // event_label: "SiddharthBeniwal_Resume.pdf", 
+        // event_label: "SiddharthBeniwal_Resume.docx", 
+        event_label: "SiddharthBeniwal_Resume.pdf", 
         value: 1
       });
     } else {
@@ -76,10 +76,10 @@ export default function Greeting() {
                 />
                 {greeting.resumeLink && (
                   <a
-                    href={require("./SiddharthBeniwal_Resume.docx")}
-                    download="SiddharthBeniwal_Resume.docx"
-                    // href={require("./SiddharthBeniwal_Resume.pdf")}
-                    // download="SiddharthBeniwal_Resume.pdf"
+                    // href={require("./SiddharthBeniwal_Resume.docx")}
+                    // download="SiddharthBeniwal_Resume.docx"
+                    href={require("./SiddharthBeniwal_Resume.pdf")}
+                    download="SiddharthBeniwal_Resume.pdf"
                     className="download-link-button"
                     onClick={() => trackResumeDownload()}
                   >
