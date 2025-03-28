@@ -61,7 +61,7 @@ export default function Greeting() {
                 }
               >
                 {/* {greeting.subTitle} */}A passionate Software Developer 🚀
-                with 3+ years of experience developing efficient, responsive,
+                with 3.5+ years of experience developing efficient, responsive,
                 and feature-rich web applications using <strong>HTML5</strong>,{" "}
                 <strong>CSS3</strong>, <strong>JavaScript(ES6)</strong>,{" "}
                 <strong>ReactJS</strong> and <strong>Redux</strong>.
