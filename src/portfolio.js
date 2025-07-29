@@ -168,7 +168,7 @@ const workExperiences = {
     {
       role: "Senior Software Engineer",
       company: "Pine Labs",
-      companylogo: "pine-labs-logo.jpg",
+      companylogo: "pine-labs-logo.png",
       date: "May 2025 - Present",
       // desc: "Working as a Frontend Developer",
       descBullets: [
