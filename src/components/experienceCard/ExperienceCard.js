@@ -8,7 +8,17 @@ export default function ExperienceCard({cardInfo, isDark}) {
 
   function getColorArrays() {
     const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
+    const palette = colorThief.getPalette(imgRef.current, 2); // Get top 5 colors
+  
+    // Function to check if color is white or nearly white
+    const isWhite = ([r, g, b]) => r > 240 && g > 240 && b > 240;
+  
+    const filteredPalette = palette.filter(color => !isWhite(color));
+    
+    // Pick the first non-white color
+    if (filteredPalette.length > 0) {
+      setColorArrays(filteredPalette[0]);
+    }
   }
 
   function rgb(values) {

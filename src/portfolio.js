@@ -167,12 +167,24 @@ const workExperiences = {
   experience: [
     {
       role: "Senior Software Engineer",
+      company: "Pine Labs",
+      companylogo: "pine-labs-logo.jpg",
+      date: "May 2025 - Present",
+      // desc: "Working as a Frontend Developer",
+      descBullets: [
+        `Engineering the frontend of a campaign promotion application enabling merchants to seamlessly configure and 
+         launch multiple campaigns—focused on building intuitive, high-performance user interfaces with React JS.`
+      ]
+    },
+    {
+      role: "Technology Analyst",
       company: "Infosys",
       companylogo: "infosys-logo.png",
-      date: "November 2021 - Present",
-      desc: "Working as a Frontend Developer",
+      date: "November 2021 - May 2025",
+      // desc: "Working as a Frontend Developer",
       descBullets: [
-        "Building responsive and user-focused web applications using React JS, JavaScript, and Redux, with some exposure to Node JS, all within an Agile environment, collaborating with cross-functional teams to deliver high-performance solutions."
+        `Building responsive and user-focused web applications using React JS, JavaScript, and Redux, with some exposure
+        to Node JS, all within an Agile environment, collaborating with cross-functional teams to deliver high-performance solutions.`
       ]
     }
   ]
@@ -307,7 +319,7 @@ const achievementSection = {
       image: require("./assets/images/pwaLogo.webp"),
       imageAlt: "PWA Logo",
       footerLink: [
-        {name: "Certification", url: ""},
+        { name: "Certification", url: "" },
         {
           name: "Final Project",
           url: "https://pakistan-olx-1.firebaseapp.com/"

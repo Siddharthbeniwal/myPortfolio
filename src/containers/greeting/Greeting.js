@@ -61,7 +61,7 @@ export default function Greeting() {
                 }
               >
                 {/* {greeting.subTitle} */}A passionate Software Developer 🚀
-                with 3.5+ years of experience developing efficient, responsive,
+                with over 3.8 years of experience developing efficient, responsive,
                 and feature-rich web applications using <strong>HTML5</strong>,{" "}
                 <strong>CSS3</strong>, <strong>JavaScript(ES6)</strong>,{" "}
                 <strong>ReactJS</strong> and <strong>Redux</strong>.
@@ -76,10 +76,10 @@ export default function Greeting() {
                 />
                 {greeting.resumeLink && (
                   <a
-                    href={require("./SiddharthBeniwal_Resume.docx")}
-                    download="SiddharthBeniwal_Resume.docx"
-                    // href={require("./SiddharthBeniwal_Resume.pdf")}
-                    // download="SiddharthBeniwal_Resume.pdf"
+                    // href={require("./SiddharthBeniwal_Resume.docx")}
+                    // download="SiddharthBeniwal_Resume.docx"
+                    href={require("./SiddharthBeniwal_Resume.pdf")}
+                    download="SiddharthBeniwal_Resume.pdf"
                     className="download-link-button"
                     onClick={() => trackResumeDownload()}
                   >
